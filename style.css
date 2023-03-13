@@ -80,9 +80,10 @@ body{
     text-align: center;
     min-height: 100vh;
     font-family: MyFont, serif;
+    
 }
 
-.qoute-container{
+.quote-container{
     width: auto;
     max-width: 90rem;
     border-radius: 10px;
@@ -91,7 +92,7 @@ body{
     box-shadow: 0 10px 10px 10px rgba(0,0,0,0.2);
 }
 
-.qoute-txt{
+.quote-txt{
     font-size: 3.2rem;
 }
 
@@ -104,7 +105,7 @@ body{
     padding-right: 4px;
 }
 
-.qoute-author{
+.quote-author{
     font-size: 2rem;
     font-style: italic;
     font-weight: 400;
@@ -147,11 +148,46 @@ button:active{
     font-size: 1.8rem;
 }
 
+/* Loader */
+.loader {
+    width: 48px;
+    height: 48px;
+    position: relative;
+  }
+  .loader::after,
+  .loader::before {
+    content: '';  
+    box-sizing: border-box;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 2px solid #333;
+    position: absolute;
+    left: 0;
+    top: 0;
+    animation: animloader 2s linear infinite;
+  }
+  .loader::after {
+    animation-delay: 1s;
+  }
+  
+  @keyframes animloader {
+    0% {
+      transform: scale(0);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 0;
+    }
+  }
+
+
 @media screen and (max-width:1000px){
-    .qoute-container{
+    .quote-container{
         margin: auto 1.2rem;
     }
-    .qoute-txt{
+    .quote-txt{
         font-size:2.5rem;
     }
 }
