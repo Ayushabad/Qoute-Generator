@@ -45,6 +45,8 @@ async function GetQuote(){
         newQuote();
     } catch(err){
         // catching errors
+        newQuote();
+        console.log(err);
     }
 }
 function newTweet(){
